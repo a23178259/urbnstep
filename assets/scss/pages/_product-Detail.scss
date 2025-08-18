@@ -1,0 +1,97 @@
+/* page container */
+
+/* 產品圖片 */
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.product-col {
+  width: calc(100% / 12 * 6);
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+    padding: 0 6px;
+    width: 100%;
+  }
+  .product-row {
+    margin: 0 -12px;
+  }
+  .product-col {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.product-color {
+  width: 64px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 產品尺碼 */
+.btn-product-size {
+  border: 1px solid $neutral-300;
+  width: 160px;
+}
+
+.btn-product-size.active,
+.btn-product-size:hover {
+  border-color: $neutral-900;
+}
+
+/* 收藏與試穿 */
+.product-action .btn {
+  width: 50%;
+}
+
+.product-action .btn:first-child:hover {
+  border-color: $Danger-300;
+  color: $Danger-300;
+}
+
+/* 產品資訊 */
+.product-item {
+  border-bottom: 1px solid $neutral-300;
+}
+
+@media (max-width: 767px) {
+  .product-action {
+    flex-direction: row-reverse;
+  }
+  // 門市預約
+  .product-action .btn:last-child {
+    padding: 12px 24px;
+    width: 90%;
+  }
+  // 加入收藏
+  .product-action .btn:first-child {
+    font-size: 0;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border: none;
+  }
+  .product-action .btn:first-child i {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-md-row {
+    margin: 0 -8px;
+  }
+  .product-md-col {
+    min-width: 316px;
+    padding: 0 8px;
+  }
+}
