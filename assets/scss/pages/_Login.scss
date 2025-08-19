@@ -1,0 +1,124 @@
+.Login {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/login-bg.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 120px 80px;
+  border-radius: 12px;
+  z-index: 1 !important;
+
+  &-content {
+    text-align: center;
+  }
+
+  &-form {
+    margin-top: 2rem;
+    display: flex;
+    border-radius: 8px;
+    // overflow: hidden;
+    flex-wrap: wrap;
+
+    // 隱藏 radio input
+    input {
+      display: none;
+    }
+
+    label {
+      flex: 1;
+      // padding: 1rem 2rem;
+      padding: 12px 130px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+
+    // 第一個 label 樣式：登入
+    label:first-of-type {
+      border-bottom: 2px solid $neutral-900;
+      color: $neutral-900;
+    }
+
+    // 第二個 label 樣式：註冊
+    label:last-of-type {
+      border-bottom: 2px solid $neutral-300;
+      color: $neutral-600;
+
+      &:hover {
+        color: $neutral-900;
+        border-bottom: 2px solid $neutral-900;
+      }
+    }
+
+    // 當 radio 被選中時，對應的 label 變樣式
+    input:checked + label {
+      border-bottom: 2px solid $neutral-900;
+      color: $neutral-900;
+      font-weight: 600;
+    }
+
+    // 未選中時的樣式
+    input:not(:checked) + label {
+      border-bottom: 2px solid $neutral-300;
+      color: $neutral-600;
+    }
+  }
+
+  // Tab 內容
+  &-tab-content {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: left;
+    order: 99;
+    display: none;
+    .Loginbtn {
+      background-color: $neutral-0;
+      border: 1px solid $neutral-300;
+      border-radius: 4px;
+    }
+  }
+}
+
+// 隱藏 CTA
+body.login-page .Login-cta-none{
+  display: none;
+}
+
+// CSS 切換
+#login-tab:checked ~ .Login-tab-content:first-of-type,
+#register-tab:checked ~ .Login-tab-content:last-of-type {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .side-image {
+    position: relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+
+    .mobile-img {
+      width: 100%;
+      border-radius: 0;
+      min-height: 200px;
+      object-fit: cover;
+    }
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .Login {
+    width: 100%;
+    background-image: none;
+    padding: 32px 12px;
+    label{
+      padding-right: 71.25px;
+      padding-left: 71.25px;
+    }
+  }
+}

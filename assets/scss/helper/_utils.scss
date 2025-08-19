@@ -298,6 +298,11 @@
   font-size: 20px;
 }
 
+// fw400 是預設值，當下樣式不是400時再添加這個class
+.font-weight-400 {
+  font-weight: 400;
+}
+
 .font-weight-500 {
   font-weight: 500;
 }
@@ -409,6 +414,9 @@
 .pl-pr-24 {
   padding: 0 24px;
 }
+.pr-24 {
+  padding-right: 24px;
+}
 
 .p-32 {
   padding: 32px;
@@ -475,11 +483,11 @@
   .pt-md-0 {
     padding-top: 0;
   }
-  .py-md-0{
+  .py-md-0 {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .pb-md-0{
+  .pb-md-0 {
     padding-bottom: 0;
   }
   .py-md-16 {
@@ -564,6 +572,10 @@
   margin-right: 12px;
 }
 
+.ml-mr12 {
+  margin: 0 12px;
+}
+
 .ml-mr-12 {
   margin: 0 -12px;
 }
@@ -582,6 +594,10 @@
 
 .ml-12 {
   margin-left: 12px;
+}
+
+.ml-24 {
+  margin-left: 24px;
 }
 
 .ml-40 {
